@@ -1,0 +1,5 @@
+pre-commit:
+  commands:
+    black:
+      run: black .
+      stage_fixed: true

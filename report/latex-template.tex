@@ -1,0 +1,246 @@
+\documentclass[10pt,conference,compsocconf]{IEEEtran}
+
+% ============================================================
+% PACKAGES
+% ============================================================
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{balance}
+
+% ============================================================
+% COMPACT IEEE LAYOUT
+% ============================================================
+\setlength{\textfloatsep}{5pt plus 1pt minus 2pt}
+\setlength{\floatsep}{5pt plus 1pt minus 2pt}
+\setlength{\intextsep}{5pt plus 1pt minus 2pt}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{0pt}
+
+\begin{document}
+
+% ============================================================
+% TITLE
+% ============================================================
+\title{Predicting Cardiovascular Disease Risk from Survey Health Indicators:
+A Regularized Logistic and Feature-Engineering Approach}
+
+\author{
+\IEEEauthorblockN{Team CS-433}
+\IEEEauthorblockA{
+\textit{School of Computer and Communication Sciences, EPFL, Switzerland}
+}
+}
+
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\begin{abstract}
+We investigate regularized logistic regression for predicting myocardial
+infarction and coronary heart disease from the 2015 CDC Behavioral Risk Factor
+Surveillance System (BRFSS). The course dataset contains 328,135 training
+respondents and 321 input features. Modeling is implemented in NumPy and the
+Python standard library. Candidate representations include missingness
+indicators, quantile bins, rank transforms, piecewise-linear splines, and
+clinical interactions. The logistic-only search reached a validation $F_1$ of
+$0.449939$ on a stratified training-data holdout. This is an interim tuning
+score: the search stopped before final cross-validation was completed, and
+final ensemble results are not yet available.
+\end{abstract}
+
+% ============================================================
+% INTRODUCTION
+% ============================================================
+\section{Introduction}
+
+The CDC Behavioral Risk Factor Surveillance System (BRFSS)~\cite{cdc2015} collects
+self-reported information on chronic conditions, health behaviors, and
+preventive practices. Our objective is to predict whether a respondent has
+coronary heart disease or myocardial infarction,
+$\text{MICHD}\in\{-1,+1\}$.
+
+The task presents four main difficulties. First, the positive prevalence is
+only approximately $8.83\%$, so a trivial negative classifier already obtains
+about $91.17\%$ accuracy while having $F_1=0$; we therefore use $F_1$ as the
+primary selection metric. Second, BRFSS contains administrative response codes:
+for example, \texttt{88} may represent ``none'', whereas \texttt{77} and
+\texttt{99} denote unavailable responses. Third, all learning algorithms must
+be implemented using only NumPy and the Python standard library. Finally, all
+imputation, scaling, spline knots, and decision thresholds must be estimated
+from fitting rows, with decision thresholds selected using validation labels.
+
+% ============================================================
+% PREPROCESSING
+% ============================================================
+\section{Preprocessing \& Feature Engineering}
+
+\subsection{CDC Decoding and Cleaning}
+
+Survey identifiers and date fields such as \texttt{SEQNO}, \texttt{\_PSU},
+and \texttt{IDATE} are discarded because they carry no meaningful clinical
+signal. For \texttt{PHYSHLTH}, \texttt{MENTHLTH}, and \texttt{POORHLTH},
+which measure unhealthy days during the previous month, we map
+$88\rightarrow0$ and convert \texttt{77}/\texttt{99} to missing values.
+
+BRFSS questionnaire logic is also used to distinguish missingness from
+administrative skips. In particular, when both physical and mental unhealthy
+days are zero, an omitted \texttt{POORHLTH} response corresponds to a valid
+skip and is therefore imputed as zero. Other missing numerical values are
+imputed using training-fold medians, with an additional binary missingness
+indicator for each affected feature.
+
+\subsection{Feature Representations}
+
+We compare several representations. Continuous variables are clipped to their
+training $[0.5\%,99.5\%]$ quantiles and standardized. \textbf{Quantile bins}
+capture threshold effects, while \textbf{empirical rank scaling} maps
+variables to their empirical CDF percentiles.
+
+For important variables such as \texttt{\_AGE80}, \texttt{\_BMI5}, and
+\texttt{PHYSHLTH}, we also construct piecewise-linear spline features
+$(x-\kappa_k)_+$ at empirical knots
+$\kappa_k\in\{q_{0.05},\dots,q_{0.95}\}$. Finally, pairwise interactions are
+generated among 13 major clinical variables, including \texttt{\_AGE80},
+\texttt{SEX}, \texttt{GENHLTH}, \texttt{BPHIGH4}, \texttt{TOLDHI2},
+\texttt{\_SMOKER3}, and \texttt{DIABETE3}.
+
+% ============================================================
+% METHODOLOGY
+% ============================================================
+\section{Methodology}
+
+\subsection{Course Baselines}
+
+We implemented all six required methods in \texttt{implementations.py}: MSE
+regression using gradient descent and stochastic gradient descent, ordinary
+least squares, ridge regression, logistic regression, and regularized logistic
+regression.
+
+Least squares is poorly matched to this task because its predictions are
+unbounded and its squared-error objective does not directly model binary class
+probabilities. Logistic regression instead models
+$P(y=1\mid x)=\sigma(x^\top w+b)$ and forms the basis of our final pipeline.
+
+\subsection{Regularized Logistic Optimization}
+
+Our penalized objective is
+
+\begin{equation}
+\begin{aligned}
+\min_{w,b}\quad
+&\frac{1}{N}\sum_{i=1}^{N}
+\Big[
+\log(1+e^{x_i^\top w+b}) \\
+&\qquad - y_i(x_i^\top w+b)
+\Big]
++\lambda\|w\|_2^2+\mu\|w\|_1 .
+\end{aligned}
+\label{eq:objective}
+\end{equation}
+
+The intercept $b$ is not regularized. For smooth $L_2$ logistic regression
+($\mu=0$), we implement L-BFGS~\cite{nocedal2006} with $m=12$ correction pairs and Armijo
+backtracking. Step sizes are chosen by the line search rather than a fixed learning-rate schedule.
+For Elastic Net ($\mu>0$), we use FISTA~\cite{beck2009fista} with adaptive momentum restarts and
+the soft-thresholding operator
+
+\begin{equation}
+\operatorname{prox}_{\gamma\mu}(v)_j
+=
+\operatorname{sign}(v_j)
+\max\!\left(|v_j|-\gamma\mu,0\right).
+\end{equation}
+
+Numerical stability is ensured through \texttt{logaddexp(0.0,z)} and stable
+sigmoid computations.
+
+\subsection{Threshold Optimization and Blending}
+
+Because of class imbalance, the default threshold $\tau=0.5$ produces too many
+false negatives. We therefore sweep all sorted out-of-fold probabilities and
+use cumulative counts to find the threshold maximizing $F_1$ in
+$O(N\log N)$ time.
+
+The planned ensemble search compares probability averaging with averaging
+in log-odds space:
+
+\begin{equation}
+\begin{aligned}
+\operatorname{logit}(p_{\mathrm{blend}})
+&=\sum_{m=1}^{M}\alpha_m\operatorname{logit}(p_m),\\
+\alpha_m&\geq0,\qquad
+\sum_{m=1}^{M}\alpha_m=1 .
+\end{aligned}
+\label{eq:blend}
+\end{equation}
+
+% ============================================================
+% RESULTS
+% ============================================================
+\section{Experimental Results}
+
+\subsection{Interim Validation Result}
+
+The current run uses a stratified 80/20 split of the training data, with
+262,508 fitting rows and 65,627 validation rows. The logistic-only search
+reached $F_1=0.449939$ on this validation split. Candidate representations,
+regularization settings, and decision thresholds are compared using these
+validation labels, so this value is an interim tuning score rather than an
+independent estimate of the final selected pipeline's performance.
+
+\begin{table}[t]
+\centering
+\caption{Confirmed Interim Logistic-Only Result}
+\label{tab:interim}
+\begin{tabular}{lr}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+Fitting rows & 262,508 \\
+Validation rows & 65,627 \\
+Validation $F_1$ & 0.449939 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Remaining Evaluation}
+
+The run stopped before final cross-validation was completed. The remaining
+steps are to finish the logistic-only search, generate three-fold out-of-fold
+predictions, and select ensemble weights and a decision threshold. Those
+out-of-fold scores will also be tuning scores if they guide selection.
+The selected component models can then be refitted on all training rows to
+produce a submission.
+
+No final cross-validation score, ensemble composition, coefficient-sparsity
+measurement, or final decision threshold is established by the interim run.
+These quantities must be reported after the unfinished runs have completed.
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+\section{Discussion \& Conclusion}
+
+The current logistic-only pipeline combines survey preprocessing, nonlinear
+feature representations, and regularization while retaining a linear model in
+the expanded feature space. Its confirmed result is an interim validation
+$F_1$ of $0.449939$. This supports continuing the regression-based search, but
+does not establish which encoding, regularization setting, or blend will be
+best after the remaining evaluation.
+
+Final conclusions will require completion of the planned cross-validation
+and ensemble-selection runs. The report will then be updated with the final
+logistic-only results and a clear distinction between tuning scores and any
+independent performance estimates.
+
+\balance
+
+\bibliographystyle{IEEEtran}
+\bibliography{literature}
+
+\end{document}

@@ -1,0 +1,3118 @@
+{
+  "selection_data": [
+    "x_train.csv",
+    "y_train.csv"
+  ],
+  "holdout_seed": 42,
+  "validation_ratio": 0.2,
+  "cv_seed": 2026,
+  "n_folds": 3,
+  "logistic_search": [
+    {
+      "mode": "linear",
+      "l1": 0.0,
+      "l2": 0.0001,
+      "threshold": 0.1907327026128769,
+      "f1": 0.4449830962556612
+    },
+    {
+      "mode": "linear",
+      "l1": 0.0001,
+      "l2": 0.0001,
+      "threshold": 0.20277264714241028,
+      "f1": 0.4480619120688505
+    },
+    {
+      "mode": "linear",
+      "l1": 0.0003,
+      "l2": 0.0001,
+      "threshold": 0.21878130733966827,
+      "f1": 0.44993942848998786
+    },
+    {
+      "mode": "linear",
+      "l1": 0.001,
+      "l2": 0.0001,
+      "threshold": 0.20655527710914612,
+      "f1": 0.44719714465672894
+    },
+    {
+      "mode": "linear",
+      "l1": 0.0,
+      "l2": 0.001,
+      "threshold": 0.20817919075489044,
+      "f1": 0.44777747477502045
+    },
+    {
+      "mode": "linear",
+      "l1": 0.0001,
+      "l2": 0.001,
+      "threshold": 0.2179945707321167,
+      "f1": 0.4487369985141159
+    },
+    {
+      "mode": "linear",
+      "l1": 0.0003,
+      "l2": 0.001,
+      "threshold": 0.21920302510261536,
+      "f1": 0.44879799067097237
+    },
+    {
+      "mode": "linear",
+      "l1": 0.001,
+      "l2": 0.001,
+      "threshold": 0.2013426274061203,
+      "f1": 0.4462605590275393
+    },
+    {
+      "mode": "bins",
+      "l1": 0.0,
+      "l2": 0.0001,
+      "threshold": 0.21679237484931946,
+      "f1": 0.43925625611631486
+    },
+    {
+      "mode": "bins",
+      "l1": 0.0001,
+      "l2": 0.0001,
+      "threshold": 0.2071893960237503,
+      "f1": 0.4445496988970837
+    },
+    {
+      "mode": "bins",
+      "l1": 0.0003,
+      "l2": 0.0001,
+      "threshold": 0.22809961438179016,
+      "f1": 0.4470847084708471
+    },
+    {
+      "mode": "bins",
+      "l1": 0.001,
+      "l2": 0.0001,
+      "threshold": 0.2142256498336792,
+      "f1": 0.44533947065592633
+    },
+    {
+      "mode": "bins",
+      "l1": 0.0,
+      "l2": 0.001,
+      "threshold": 0.22093915939331055,
+      "f1": 0.442503018680304
+    },
+    {
+      "mode": "bins",
+      "l1": 0.0001,
+      "l2": 0.001,
+      "threshold": 0.18621541559696198,
+      "f1": 0.4448230172250615
+    },
+    {
+      "mode": "bins",
+      "l1": 0.0003,
+      "l2": 0.001,
+      "threshold": 0.22559896111488342,
+      "f1": 0.44585615188024824
+    },
+    {
+      "mode": "bins",
+      "l1": 0.001,
+      "l2": 0.001,
+      "threshold": 0.21549686789512634,
+      "f1": 0.4450888002899601
+    }
+  ],
+  "tree_search": [
+    {
+      "max_depth": 3,
+      "l2": 20.0,
+      "n_estimators": 225,
+      "f1": 0.4483550114766641
+    },
+    {
+      "max_depth": 5,
+      "l2": 20.0,
+      "n_estimators": 125,
+      "f1": 0.44972353061642434
+    },
+    {
+      "max_depth": 3,
+      "l2": 100.0,
+      "n_estimators": 250,
+      "f1": 0.4497295798086257
+    },
+    {
+      "max_depth": 5,
+      "l2": 100.0,
+      "n_estimators": 250,
+      "f1": 0.44828070175438595
+    }
+  ],
+  "tree_candidates": [
+    {
+      "max_depth": 3,
+      "l2": 100.0,
+      "n_estimators": 250,
+      "f1": 0.4497295798086257
+    },
+    {
+      "max_depth": 5,
+      "l2": 20.0,
+      "n_estimators": 125,
+      "f1": 0.44972353061642434
+    }
+  ],
+  "blend_results": [
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "threshold": 0.22357723870519333,
+      "f1": 0.44205946337926033
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.1,
+        0.9
+      ],
+      "threshold": 0.22244462591718978,
+      "f1": 0.4431129078833381
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.2,
+        0.8
+      ],
+      "threshold": 0.21994472784542482,
+      "f1": 0.4436026815706342
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.3,
+        0.7
+      ],
+      "threshold": 0.22432137478211256,
+      "f1": 0.44437030375119674
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.4,
+        0.6
+      ],
+      "threshold": 0.2215443835388517,
+      "f1": 0.44432635827026096
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "threshold": 0.21026150716719938,
+      "f1": 0.4444168460561903
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.6,
+        0.4
+      ],
+      "threshold": 0.21442374623954685,
+      "f1": 0.44460933234400596
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.7,
+        0.3
+      ],
+      "threshold": 0.21840534183499882,
+      "f1": 0.4445296088116732
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.8,
+        0.2
+      ],
+      "threshold": 0.22217324222831675,
+      "f1": 0.4439912683823529
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.9,
+        0.1
+      ],
+      "threshold": 0.20745826303985648,
+      "f1": 0.44338205163229066
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "threshold": 0.2098168581724167,
+      "f1": 0.44279538508136684
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.0,
+        0.9
+      ],
+      "threshold": 0.22719699502748478,
+      "f1": 0.4429693810118217
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.1,
+        0.8
+      ],
+      "threshold": 0.2155981475910608,
+      "f1": 0.4434173629997041
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.2,
+        0.7
+      ],
+      "threshold": 0.2236937816849795,
+      "f1": 0.4441837222439491
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "threshold": 0.22375542964744333,
+      "f1": 0.4444315746800255
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.4,
+        0.5
+      ],
+      "threshold": 0.21341682290881978,
+      "f1": 0.44470509383378015
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.5,
+        0.4
+      ],
+      "threshold": 0.22248657109815634,
+      "f1": 0.4448253510983075
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.6,
+        0.3
+      ],
+      "threshold": 0.21477202981593776,
+      "f1": 0.44485577664661424
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.7,
+        0.2
+      ],
+      "threshold": 0.22006837687103495,
+      "f1": 0.4444444444444444
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.8,
+        0.1
+      ],
+      "threshold": 0.2134150826049565,
+      "f1": 0.44394856489358736
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.9,
+        0.0
+      ],
+      "threshold": 0.20429370850324632,
+      "f1": 0.4431497127407908
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.0,
+        0.8
+      ],
+      "threshold": 0.21923411760868317,
+      "f1": 0.44345752352663975
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.1,
+        0.7
+      ],
+      "threshold": 0.2121689541891384,
+      "f1": 0.44422790484012414
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.2,
+        0.6
+      ],
+      "threshold": 0.22264792678148365,
+      "f1": 0.444781159357548
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "threshold": 0.20925845951373762,
+      "f1": 0.4447656013433534
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.4,
+        0.4
+      ],
+      "threshold": 0.22165670505398088,
+      "f1": 0.4448819463405521
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.5,
+        0.3
+      ],
+      "threshold": 0.2248986268214862,
+      "f1": 0.44498003629764066
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.6,
+        0.2
+      ],
+      "threshold": 0.22201274777249586,
+      "f1": 0.4447191043531999
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.7,
+        0.1
+      ],
+      "threshold": 0.21399579927501458,
+      "f1": 0.44411209728143125
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.8,
+        0.0
+      ],
+      "threshold": 0.2132439136505127,
+      "f1": 0.4434623802818865
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.0,
+        0.7
+      ],
+      "threshold": 0.21477244312820026,
+      "f1": 0.44411942565429563
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.1,
+        0.6
+      ],
+      "threshold": 0.21446682825427998,
+      "f1": 0.44466577821421055
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.2,
+        0.5
+      ],
+      "threshold": 0.22290170920179225,
+      "f1": 0.4451150836052791
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "threshold": 0.22258438673346023,
+      "f1": 0.44503093497166096
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.4,
+        0.3
+      ],
+      "threshold": 0.22365129760123587,
+      "f1": 0.4451715650789055
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.5,
+        0.2
+      ],
+      "threshold": 0.22023605513050784,
+      "f1": 0.4451939291736931
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.6,
+        0.1
+      ],
+      "threshold": 0.22467531839852578,
+      "f1": 0.44442509469284686
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.7,
+        0.0
+      ],
+      "threshold": 0.2076380595564842,
+      "f1": 0.44385114597880554
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.0,
+        0.6
+      ],
+      "threshold": 0.22034315120908504,
+      "f1": 0.44494749057982436
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.1,
+        0.5
+      ],
+      "threshold": 0.21863194367912667,
+      "f1": 0.4453145021213588
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "threshold": 0.2167829150917406,
+      "f1": 0.4453656673127803
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "threshold": 0.21999467095161698,
+      "f1": 0.44528021278725566
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "threshold": 0.2241286765051851,
+      "f1": 0.44512080235372553
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.5,
+        0.1
+      ],
+      "threshold": 0.22193217007405672,
+      "f1": 0.4448470730339502
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.6,
+        0.0
+      ],
+      "threshold": 0.21972613632678986,
+      "f1": 0.444263698630137
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "threshold": 0.2191988852145209,
+      "f1": 0.44531662551557794
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.1,
+        0.4
+      ],
+      "threshold": 0.21825028848048936,
+      "f1": 0.44553497766777617
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.2,
+        0.3
+      ],
+      "threshold": 0.2218096084268978,
+      "f1": 0.4456185307285893
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "threshold": 0.21644696008249542,
+      "f1": 0.4456157705080195
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.4,
+        0.1
+      ],
+      "threshold": 0.22466754752478868,
+      "f1": 0.4450705043493414
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "threshold": 0.2207445502281189,
+      "f1": 0.4444826400825026
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "threshold": 0.22157783716409704,
+      "f1": 0.44541711060558065
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.1,
+        0.3
+      ],
+      "threshold": 0.21722714399991583,
+      "f1": 0.44571120659094454
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "threshold": 0.2158294260204324,
+      "f1": 0.44545069826491746
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.21756009275722402,
+      "f1": 0.44506538821593716
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.4,
+        0.0
+      ],
+      "threshold": 0.21945334374904632,
+      "f1": 0.4445585654983524
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.0,
+        0.3
+      ],
+      "threshold": 0.21798295176229388,
+      "f1": 0.44546864109020046
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.1,
+        0.2
+      ],
+      "threshold": 0.2156281459440102,
+      "f1": 0.44530632968520817
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "threshold": 0.21668487785978735,
+      "f1": 0.44508261656858306
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.3,
+        0.0
+      ],
+      "threshold": 0.21574222445487973,
+      "f1": 0.4448045999689953
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "threshold": 0.21433242645042885,
+      "f1": 0.4451121907382965
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.8,
+        0.1,
+        0.1
+      ],
+      "threshold": 0.2111857964028714,
+      "f1": 0.44489183860487075
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.8,
+        0.2,
+        0.0
+      ],
+      "threshold": 0.2127307951450348,
+      "f1": 0.4449313386178408
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.9,
+        0.0,
+        0.1
+      ],
+      "threshold": 0.22151395364543594,
+      "f1": 0.4447386218110134
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "threshold": 0.22090415954589845,
+      "f1": 0.4446135949101667
+    },
+    {
+      "tree_candidate": 0,
+      "method": "probability",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 0.21982905268669128,
+      "f1": 0.4444126361593404
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "threshold": 0.22357723870519333,
+      "f1": 0.44205946337926033
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.1,
+        0.9
+      ],
+      "threshold": 0.22220875381717778,
+      "f1": 0.4431828031550663
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.2,
+        0.8
+      ],
+      "threshold": 0.2212180298521474,
+      "f1": 0.44346498429983006
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.3,
+        0.7
+      ],
+      "threshold": 0.22434295326606984,
+      "f1": 0.4443441943041751
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.4,
+        0.6
+      ],
+      "threshold": 0.22123788104822453,
+      "f1": 0.4442301325694874
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "threshold": 0.22410468342408862,
+      "f1": 0.4444153881915388
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.6,
+        0.4
+      ],
+      "threshold": 0.21386683007322005,
+      "f1": 0.44478729820329044
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.7,
+        0.3
+      ],
+      "threshold": 0.21321880223116485,
+      "f1": 0.44474284195655517
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.8,
+        0.2
+      ],
+      "threshold": 0.21986743778893514,
+      "f1": 0.4439936572334681
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.9,
+        0.1
+      ],
+      "threshold": 0.20596639898818314,
+      "f1": 0.44337375634586856
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "threshold": 0.20981685817241666,
+      "f1": 0.44279538508136684
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.0,
+        0.9
+      ],
+      "threshold": 0.22070875569607695,
+      "f1": 0.44303306367019674
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.1,
+        0.8
+      ],
+      "threshold": 0.22219071050930586,
+      "f1": 0.44340713336030985
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.2,
+        0.7
+      ],
+      "threshold": 0.22411018109762476,
+      "f1": 0.44419217278668005
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "threshold": 0.2231383123001789,
+      "f1": 0.4444444444444444
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.4,
+        0.5
+      ],
+      "threshold": 0.2279585126846786,
+      "f1": 0.4448078736445073
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.5,
+        0.4
+      ],
+      "threshold": 0.22137295947118496,
+      "f1": 0.44479018107956264
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.6,
+        0.3
+      ],
+      "threshold": 0.21358456403135298,
+      "f1": 0.44515116702625457
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.7,
+        0.2
+      ],
+      "threshold": 0.21976245648793818,
+      "f1": 0.4446508968770099
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.8,
+        0.1
+      ],
+      "threshold": 0.21270346587953187,
+      "f1": 0.4438810336421258
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.9,
+        0.0
+      ],
+      "threshold": 0.2038649857008811,
+      "f1": 0.44315404248423385
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.0,
+        0.8
+      ],
+      "threshold": 0.21861672174761534,
+      "f1": 0.443413464283675
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.1,
+        0.7
+      ],
+      "threshold": 0.21332688789152426,
+      "f1": 0.4441267572075292
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.2,
+        0.6
+      ],
+      "threshold": 0.22202968620844488,
+      "f1": 0.4446017596833148
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "threshold": 0.22529675452970582,
+      "f1": 0.44487947406866324
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.4,
+        0.4
+      ],
+      "threshold": 0.22700070612444118,
+      "f1": 0.4449599882534322
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.5,
+        0.3
+      ],
+      "threshold": 0.22384648566218882,
+      "f1": 0.44511858797573084
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.6,
+        0.2
+      ],
+      "threshold": 0.21967288063807955,
+      "f1": 0.4448194494100822
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.7,
+        0.1
+      ],
+      "threshold": 0.22427512518738635,
+      "f1": 0.4441058680132335
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.8,
+        0.0
+      ],
+      "threshold": 0.21182006203898987,
+      "f1": 0.44348792002221604
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.0,
+        0.7
+      ],
+      "threshold": 0.21074426252703582,
+      "f1": 0.4440863501236352
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.1,
+        0.6
+      ],
+      "threshold": 0.21555263603586725,
+      "f1": 0.4447709740314787
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.2,
+        0.5
+      ],
+      "threshold": 0.22217925206054434,
+      "f1": 0.4450867887442008
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "threshold": 0.22510636291721756,
+      "f1": 0.44507379454314533
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.4,
+        0.3
+      ],
+      "threshold": 0.22274057364771513,
+      "f1": 0.44517791482092706
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.5,
+        0.2
+      ],
+      "threshold": 0.2189247388960667,
+      "f1": 0.4451770347219249
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.6,
+        0.1
+      ],
+      "threshold": 0.2209645207691331,
+      "f1": 0.44454014326112856
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.7,
+        0.0
+      ],
+      "threshold": 0.21780636475123452,
+      "f1": 0.4438300225445574
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.0,
+        0.6
+      ],
+      "threshold": 0.21948434782217519,
+      "f1": 0.4448613657195234
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.1,
+        0.5
+      ],
+      "threshold": 0.21688240312500806,
+      "f1": 0.4453689636077073
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "threshold": 0.21627113965447273,
+      "f1": 0.4453954173810772
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "threshold": 0.2175192373945138,
+      "f1": 0.4453868814664067
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "threshold": 0.21674897489319786,
+      "f1": 0.44532357778912146
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.5,
+        0.1
+      ],
+      "threshold": 0.22108534830037052,
+      "f1": 0.44482441519627564
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.6,
+        0.0
+      ],
+      "threshold": 0.22067342455614652,
+      "f1": 0.4443297934849592
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "threshold": 0.2175903524063225,
+      "f1": 0.4453111655184194
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.1,
+        0.4
+      ],
+      "threshold": 0.21606750490307053,
+      "f1": 0.4454643322567851
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.2,
+        0.3
+      ],
+      "threshold": 0.21788286293921097,
+      "f1": 0.44558787896064656
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "threshold": 0.21593292737601263,
+      "f1": 0.44561681423439226
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.4,
+        0.1
+      ],
+      "threshold": 0.22458600634689424,
+      "f1": 0.4451331296377128
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "threshold": 0.22055144109851188,
+      "f1": 0.4445208817037865
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "threshold": 0.21804790040867628,
+      "f1": 0.4453569442662218
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.1,
+        0.3
+      ],
+      "threshold": 0.21768886669130993,
+      "f1": 0.4456472196900638
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "threshold": 0.21465566607168307,
+      "f1": 0.4454491675821854
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.2182760826238302,
+      "f1": 0.44509683763485297
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.4,
+        0.0
+      ],
+      "threshold": 0.21798473327933476,
+      "f1": 0.44462443516071276
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.0,
+        0.3
+      ],
+      "threshold": 0.21922039194761767,
+      "f1": 0.44549776606713254
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.1,
+        0.2
+      ],
+      "threshold": 0.2152373729946962,
+      "f1": 0.44529452451194895
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "threshold": 0.21617770541744766,
+      "f1": 0.4450950441276307
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.3,
+        0.0
+      ],
+      "threshold": 0.2157278885793968,
+      "f1": 0.444886499908297
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "threshold": 0.21315070252033277,
+      "f1": 0.4451763914390234
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.8,
+        0.1,
+        0.1
+      ],
+      "threshold": 0.21046440852564177,
+      "f1": 0.44484513918748353
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.8,
+        0.2,
+        0.0
+      ],
+      "threshold": 0.2123818339586737,
+      "f1": 0.4449807488421405
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.9,
+        0.0,
+        0.1
+      ],
+      "threshold": 0.22133581034858094,
+      "f1": 0.44469402447804174
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "threshold": 0.21287833069263676,
+      "f1": 0.4445686499175586
+    },
+    {
+      "tree_candidate": 0,
+      "method": "logit",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 0.2198290526866913,
+      "f1": 0.4444126361593404
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "threshold": 0.22772017502040703,
+      "f1": 0.4414959539257855
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.1,
+        0.9
+      ],
+      "threshold": 0.22649690654597604,
+      "f1": 0.4424891831460348
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.2,
+        0.8
+      ],
+      "threshold": 0.21399579930379306,
+      "f1": 0.44343740443159385
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.3,
+        0.7
+      ],
+      "threshold": 0.21332976164006714,
+      "f1": 0.44401592608520735
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.4,
+        0.6
+      ],
+      "threshold": 0.21611705886651866,
+      "f1": 0.4447307611511799
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "threshold": 0.2153452641022176,
+      "f1": 0.4452836522322927
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.6,
+        0.4
+      ],
+      "threshold": 0.2189640386177052,
+      "f1": 0.4451783917104909
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.7,
+        0.3
+      ],
+      "threshold": 0.21531499898972156,
+      "f1": 0.4447837292693859
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.8,
+        0.2
+      ],
+      "threshold": 0.21577876479048738,
+      "f1": 0.4442354130398158
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        0.9,
+        0.1
+      ],
+      "threshold": 0.20722571708315557,
+      "f1": 0.4433987997817785
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "threshold": 0.2098168581724167,
+      "f1": 0.44279538508136684
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.0,
+        0.9
+      ],
+      "threshold": 0.22368969799387955,
+      "f1": 0.4427408451514541
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.1,
+        0.8
+      ],
+      "threshold": 0.21769452003352352,
+      "f1": 0.4434019413098911
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.2,
+        0.7
+      ],
+      "threshold": 0.22379151202494874,
+      "f1": 0.44402227883079315
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "threshold": 0.22540767149321053,
+      "f1": 0.44485017098475627
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.4,
+        0.5
+      ],
+      "threshold": 0.21780410632330255,
+      "f1": 0.44543568171873016
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.5,
+        0.4
+      ],
+      "threshold": 0.22135197742008,
+      "f1": 0.44578899187550064
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.6,
+        0.3
+      ],
+      "threshold": 0.21519585941015873,
+      "f1": 0.44533811618978225
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.7,
+        0.2
+      ],
+      "threshold": 0.22132887904985055,
+      "f1": 0.44446989763046746
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.8,
+        0.1
+      ],
+      "threshold": 0.2141072771731323,
+      "f1": 0.44371813674139254
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.1,
+        0.9,
+        0.0
+      ],
+      "threshold": 0.20429370850324632,
+      "f1": 0.4431497127407908
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.0,
+        0.8
+      ],
+      "threshold": 0.2146402851978405,
+      "f1": 0.4434003039471299
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.1,
+        0.7
+      ],
+      "threshold": 0.209875302187736,
+      "f1": 0.4441701637455772
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.2,
+        0.6
+      ],
+      "threshold": 0.22247774160162834,
+      "f1": 0.44474095754601933
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "threshold": 0.22512592589067015,
+      "f1": 0.445407002853873
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.4,
+        0.4
+      ],
+      "threshold": 0.2221455667191803,
+      "f1": 0.4460481198261144
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.5,
+        0.3
+      ],
+      "threshold": 0.22008230321487637,
+      "f1": 0.44566736049727695
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.6,
+        0.2
+      ],
+      "threshold": 0.22361891633220832,
+      "f1": 0.4449384355558122
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.7,
+        0.1
+      ],
+      "threshold": 0.22252081403865367,
+      "f1": 0.44410563258730795
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.2,
+        0.8,
+        0.0
+      ],
+      "threshold": 0.2132439136505127,
+      "f1": 0.4434623802818865
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.0,
+        0.7
+      ],
+      "threshold": 0.2143020034416755,
+      "f1": 0.4441100242454644
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.1,
+        0.6
+      ],
+      "threshold": 0.22128980116181984,
+      "f1": 0.44472085209807705
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.2,
+        0.5
+      ],
+      "threshold": 0.22036945059387636,
+      "f1": 0.4456044269496263
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "threshold": 0.22115139779226378,
+      "f1": 0.445824686940966
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.4,
+        0.3
+      ],
+      "threshold": 0.22048273565746013,
+      "f1": 0.4458185764880612
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.5,
+        0.2
+      ],
+      "threshold": 0.222289814942145,
+      "f1": 0.445351812979843
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.6,
+        0.1
+      ],
+      "threshold": 0.22439843854961114,
+      "f1": 0.444557138096411
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.3,
+        0.7,
+        0.0
+      ],
+      "threshold": 0.2076380595564842,
+      "f1": 0.44385114597880554
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.0,
+        0.6
+      ],
+      "threshold": 0.21131832047775034,
+      "f1": 0.44477871465437535
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.1,
+        0.5
+      ],
+      "threshold": 0.22092632107302684,
+      "f1": 0.4456490645917959
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "threshold": 0.218757424951319,
+      "f1": 0.44559644363646694
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "threshold": 0.21916748900655925,
+      "f1": 0.445677221131689
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "threshold": 0.22397535722522666,
+      "f1": 0.4454637534365504
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.5,
+        0.1
+      ],
+      "threshold": 0.22188377833909176,
+      "f1": 0.44491068734102635
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.4,
+        0.6,
+        0.0
+      ],
+      "threshold": 0.21972613632678986,
+      "f1": 0.444263698630137
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "threshold": 0.2199728946362079,
+      "f1": 0.44543004235535716
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.1,
+        0.4
+      ],
+      "threshold": 0.22844263244295954,
+      "f1": 0.4457366048485382
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.2,
+        0.3
+      ],
+      "threshold": 0.216979608070868,
+      "f1": 0.44560888110505353
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "threshold": 0.22602336441683357,
+      "f1": 0.44556851311953355
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.4,
+        0.1
+      ],
+      "threshold": 0.21650792126710694,
+      "f1": 0.44499343563392013
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "threshold": 0.2207445502281189,
+      "f1": 0.4444826400825026
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "threshold": 0.2160306183055302,
+      "f1": 0.44579008885947247
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.1,
+        0.3
+      ],
+      "threshold": 0.22054197833810646,
+      "f1": 0.4456559065934066
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "threshold": 0.2193316750087196,
+      "f1": 0.44537851046549737
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.2229297007969442,
+      "f1": 0.4452173411071985
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.6,
+        0.4,
+        0.0
+      ],
+      "threshold": 0.21945334374904632,
+      "f1": 0.4445585654983524
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.0,
+        0.3
+      ],
+      "threshold": 0.219876703754602,
+      "f1": 0.44568865782069045
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.1,
+        0.2
+      ],
+      "threshold": 0.2151424696554675,
+      "f1": 0.4454936346007925
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "threshold": 0.21789759187903548,
+      "f1": 0.4453334468229987
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.7,
+        0.3,
+        0.0
+      ],
+      "threshold": 0.21574222445487973,
+      "f1": 0.4448045999689953
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "threshold": 0.21400862300229093,
+      "f1": 0.44501056816114
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.8,
+        0.1,
+        0.1
+      ],
+      "threshold": 0.21217685797086366,
+      "f1": 0.44488068387491997
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.8,
+        0.2,
+        0.0
+      ],
+      "threshold": 0.2127307951450348,
+      "f1": 0.4449313386178408
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.9,
+        0.0,
+        0.1
+      ],
+      "threshold": 0.21031778952825642,
+      "f1": 0.44456433027624465
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "threshold": 0.22090415954589845,
+      "f1": 0.4446135949101667
+    },
+    {
+      "tree_candidate": 1,
+      "method": "probability",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 0.21982905268669128,
+      "f1": 0.4444126361593404
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "threshold": 0.22772017502040703,
+      "f1": 0.4414959539257855
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.1,
+        0.9
+      ],
+      "threshold": 0.22605095509481465,
+      "f1": 0.44256060386122803
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.2,
+        0.8
+      ],
+      "threshold": 0.220846435015309,
+      "f1": 0.443388553572193
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.3,
+        0.7
+      ],
+      "threshold": 0.21397758201909609,
+      "f1": 0.4442057391571223
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.4,
+        0.6
+      ],
+      "threshold": 0.21532148731366108,
+      "f1": 0.4448744373869516
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "threshold": 0.21399946373843104,
+      "f1": 0.44536111305320564
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.6,
+        0.4
+      ],
+      "threshold": 0.21618926644989178,
+      "f1": 0.44555027700635774
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.7,
+        0.3
+      ],
+      "threshold": 0.2126020788044576,
+      "f1": 0.4449333686101402
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.8,
+        0.2
+      ],
+      "threshold": 0.21589327967218067,
+      "f1": 0.4442442245153661
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        0.9,
+        0.1
+      ],
+      "threshold": 0.21958385867759037,
+      "f1": 0.4435450542246797
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "threshold": 0.20981685817241666,
+      "f1": 0.44279538508136684
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.0,
+        0.9
+      ],
+      "threshold": 0.223271153689247,
+      "f1": 0.4427920088598674
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.1,
+        0.8
+      ],
+      "threshold": 0.21383062634152883,
+      "f1": 0.44352828112595233
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.2,
+        0.7
+      ],
+      "threshold": 0.21323541782642705,
+      "f1": 0.44404221547715184
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "threshold": 0.22516338106808556,
+      "f1": 0.44512602843271215
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.4,
+        0.5
+      ],
+      "threshold": 0.2175880810195415,
+      "f1": 0.44543291024478693
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.5,
+        0.4
+      ],
+      "threshold": 0.21766609479017715,
+      "f1": 0.44584668614049516
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.6,
+        0.3
+      ],
+      "threshold": 0.21364950847059896,
+      "f1": 0.4454823868324267
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.7,
+        0.2
+      ],
+      "threshold": 0.22038491978056454,
+      "f1": 0.4444826105624732
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.8,
+        0.1
+      ],
+      "threshold": 0.22205055358413586,
+      "f1": 0.44378630168497324
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.1,
+        0.9,
+        0.0
+      ],
+      "threshold": 0.2038649857008811,
+      "f1": 0.44315404248423385
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.0,
+        0.8
+      ],
+      "threshold": 0.21408984150352164,
+      "f1": 0.4433875421908561
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.1,
+        0.7
+      ],
+      "threshold": 0.2094433364255356,
+      "f1": 0.4443101435340979
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.2,
+        0.6
+      ],
+      "threshold": 0.22144894159860767,
+      "f1": 0.44502820722621766
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "threshold": 0.2213107519651992,
+      "f1": 0.4455897553692431
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.4,
+        0.4
+      ],
+      "threshold": 0.221899923193516,
+      "f1": 0.4459478911760472
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.5,
+        0.3
+      ],
+      "threshold": 0.21571022345754984,
+      "f1": 0.4455907431680126
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.6,
+        0.2
+      ],
+      "threshold": 0.22349029071869736,
+      "f1": 0.44506512301013024
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.7,
+        0.1
+      ],
+      "threshold": 0.22319925973042254,
+      "f1": 0.44424860585396864
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.2,
+        0.8,
+        0.0
+      ],
+      "threshold": 0.21182006203898987,
+      "f1": 0.44348792002221604
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.0,
+        0.7
+      ],
+      "threshold": 0.21361185174625213,
+      "f1": 0.44422135776132515
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.1,
+        0.6
+      ],
+      "threshold": 0.22096536336296854,
+      "f1": 0.4448331230645716
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.2,
+        0.5
+      ],
+      "threshold": 0.22046643384274717,
+      "f1": 0.44571805195363434
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "threshold": 0.22176926366218286,
+      "f1": 0.44590003455027066
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.4,
+        0.3
+      ],
+      "threshold": 0.2200339198211575,
+      "f1": 0.4458184836904404
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.5,
+        0.2
+      ],
+      "threshold": 0.22167734722095173,
+      "f1": 0.4452409742615305
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.6,
+        0.1
+      ],
+      "threshold": 0.2230823464083081,
+      "f1": 0.4446339524463395
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.3,
+        0.7,
+        0.0
+      ],
+      "threshold": 0.21780636475123452,
+      "f1": 0.4438300225445574
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.0,
+        0.6
+      ],
+      "threshold": 0.2149908705899182,
+      "f1": 0.444806288601909
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.1,
+        0.5
+      ],
+      "threshold": 0.22065680281749975,
+      "f1": 0.4456874049852279
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "threshold": 0.21888254724150735,
+      "f1": 0.4456619440996447
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "threshold": 0.22019034849830318,
+      "f1": 0.4457724276296933
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "threshold": 0.2238423702623015,
+      "f1": 0.4456955468171859
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.5,
+        0.1
+      ],
+      "threshold": 0.22142038476707593,
+      "f1": 0.44477036781410867
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.4,
+        0.6,
+        0.0
+      ],
+      "threshold": 0.22067342455614652,
+      "f1": 0.4443297934849592
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "threshold": 0.21963796335283892,
+      "f1": 0.44537238302253745
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.1,
+        0.4
+      ],
+      "threshold": 0.22102675854739676,
+      "f1": 0.4456865337088338
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.2,
+        0.3
+      ],
+      "threshold": 0.215216721347729,
+      "f1": 0.4457810959290041
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "threshold": 0.2249080278127663,
+      "f1": 0.4455809074219774
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.4,
+        0.1
+      ],
+      "threshold": 0.21591875649489428,
+      "f1": 0.44504074455915377
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "threshold": 0.22055144109851188,
+      "f1": 0.4445208817037865
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "threshold": 0.21594908299385956,
+      "f1": 0.44587894625326646
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.1,
+        0.3
+      ],
+      "threshold": 0.22042819876012718,
+      "f1": 0.44583757728779033
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "threshold": 0.2165951334171348,
+      "f1": 0.4455744252914265
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "threshold": 0.22087541939777985,
+      "f1": 0.44519426815610375
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.6,
+        0.4,
+        0.0
+      ],
+      "threshold": 0.21798473327933476,
+      "f1": 0.44462443516071276
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.0,
+        0.3
+      ],
+      "threshold": 0.22215633619503805,
+      "f1": 0.44581078155444903
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.1,
+        0.2
+      ],
+      "threshold": 0.2150960398927055,
+      "f1": 0.44540561864239625
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "threshold": 0.2161442883161795,
+      "f1": 0.44536758368304297
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.7,
+        0.3,
+        0.0
+      ],
+      "threshold": 0.2157278885793968,
+      "f1": 0.444886499908297
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.8,
+        0.0,
+        0.2
+      ],
+      "threshold": 0.22220905590499915,
+      "f1": 0.4452050837666089
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.8,
+        0.1,
+        0.1
+      ],
+      "threshold": 0.21882115790839213,
+      "f1": 0.44488503451817196
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.8,
+        0.2,
+        0.0
+      ],
+      "threshold": 0.2123818339586737,
+      "f1": 0.4449807488421405
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.9,
+        0.0,
+        0.1
+      ],
+      "threshold": 0.20890234907573602,
+      "f1": 0.44475987046096604
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        0.9,
+        0.1,
+        0.0
+      ],
+      "threshold": 0.21287833069263676,
+      "f1": 0.4445686499175586
+    },
+    {
+      "tree_candidate": 1,
+      "method": "logit",
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "threshold": 0.2198290526866913,
+      "f1": 0.4444126361593404
+    }
+  ],
+  "best_params": {
+    "linear": {
+      "mode": "linear",
+      "l1": 0.0003,
+      "l2": 0.0001,
+      "threshold": 0.21878130733966827,
+      "f1": 0.44993942848998786
+    },
+    "bins": {
+      "mode": "bins",
+      "l1": 0.0003,
+      "l2": 0.0001,
+      "threshold": 0.22809961438179016,
+      "f1": 0.4470847084708471
+    },
+    "trees": {
+      "max_depth": 5,
+      "l2": 20.0,
+      "n_estimators": 125,
+      "f1": 0.44972353061642434
+    }
+  },
+  "best_blend": {
+    "tree_candidate": 1,
+    "method": "probability",
+    "weights": [
+      0.2,
+      0.4,
+      0.4
+    ],
+    "threshold": 0.2221455667191803,
+    "f1": 0.4460481198261144
+  },
+  "model_names": [
+    "linear",
+    "bins",
+    "trees"
+  ],
+  "selected_weights": {
+    "linear": 0.2,
+    "bins": 0.4,
+    "trees": 0.4
+  },
+  "threshold": 0.2221455667191803,
+  "training_rows": 328135,
+  "training_labels_sha256": "e97f03ff51a9a231120df29d6e481f4481aee861949c293648c4133fd44f6bd3",
+  "test_labels_used_for_selection": false,
+  "note": "Holdout and OOF scores informed selection and include selection optimism."
+}

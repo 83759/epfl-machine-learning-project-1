@@ -1,0 +1,59 @@
+[tools]
+black = "latest"
+lefthook = "latest"
+micromamba = "latest"
+tinytex = "latest"
+
+[shell_alias]
+conda = "micromamba"
+
+[tasks.setup]
+description = "Create the course environment"
+run = '''
+ENV_NAME="project1-grading"
+
+if ! micromamba env list | awk -v name="$ENV_NAME" '$1 == name { found=1 } END { exit !found }'; then
+  micromamba env create -y -f grading_tests/environment.yml
+fi
+'''
+
+[tasks.latex]
+description = "Compile the LaTeX report"
+run = "./scripts/compile-latex.sh"
+
+[tasks.format]
+description = "Format Python files with Black"
+run = "black ."
+
+[tasks.test]
+description = "Run the public grading tests"
+depends = ["setup"]
+run = "micromamba run -n project1-grading pytest --github_link . grading_tests"
+
+[hooks]
+postinstall = [{ task = "setup" }, "lefthook install"]
+
+[hooks.enter]
+shell = "zsh"
+script = '''
+ENV_NAME="project1-grading"
+
+if ! micromamba env list | awk -v name="$ENV_NAME" '$1 == name { found=1 } END { exit !found }'; then
+  echo
+  echo "$ENV_NAME is not installed."
+  echo "Run: mise run setup"
+  echo
+  return 0
+fi
+
+eval "$(micromamba shell hook --shell zsh)"
+micromamba activate "$ENV_NAME"
+'''
+
+[hooks.leave]
+shell = "zsh"
+script = '''
+if [[ "${CONDA_DEFAULT_ENV:-}" == "project1-grading" ]]; then
+  micromamba deactivate
+fi
+'''

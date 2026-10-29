@@ -1,0 +1,75 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Local environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Extracted course data (keep data/dataset_to_release.zip)
+data/dataset/
+
+# Generated experiment artifacts
+artifacts/
+checkpoints/
+logs/
+runs/
+wandb/
+mlruns/
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+
+# Generated predictions and submissions
+submission*.csv
+predictions*.csv
+
+# LaTeX build files (keep source files and final PDFs)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
